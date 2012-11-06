@@ -22,9 +22,9 @@ https://github.com/groovydev/modules-manager-grails-plugin
 
 4 - Define the javascript and css dependencies.  In grails-app/config/BuildConfig.groovy add:
 
-dependencies {
-    compile 'org.webjars:bootstrap:2.1.1'
-}
+	dependencies {
+    	compile 'org.webjars:bootstrap:2.1.1'
+	}
 
 5 - Create resources modules (download javascript and css dependencies):
      grails refresh-modules
@@ -37,17 +37,17 @@ What it does is add the necessary require tag to the html page to include the st
 
 In the head tag add:
 
-<head>
-    <r:require modules="jquery, bootstrap"/>
-    <r:layoutResources/>
+	<head>
+	    <r:require modules="jquery, bootstrap"/>
+	    <r:layoutResources/>
 
 And then at the bottom of the page add:
 
-<r:layoutResources/>
-</body>
+	<r:layoutResources/>
+	</body>
 
 
 8 - The resource manager then optimizes when the javascript is load by when it is need in the page.  For this reason it is necessary to put the javascript in a <r:script> tag so that it will be included when the layoutResources tag is called.  By default it automatically includes the javascript at the bottom of the page.  For example to use a jquery initialization function add the following to the page:
 
- <r:script>
+ 	<r:script>
         $(function () {
