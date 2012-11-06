@@ -14,11 +14,13 @@ Steps for using the plugin:
 https://github.com/groovydev/modules-manager-grails-plugin
 
 
-2 - build the plugin:
-     grails package-plugin
+2 - Build the plugin:
+	
+	grails package-plugin
 
-3 - Install the plugin from the file system- this assumes the plugin is in the same parent directory as the project:
-     grails install-plugin ../modules-manager-grails-plugin/grails-modules-manager-0.2.1.zip
+3 - Install the plugin from the file system - this assumes the plugin is in the same parent directory as the project:
+	
+	grails install-plugin ../modules-manager-grails-plugin/grails-modules-manager-0.2.1.zip
 
 4 - Define the javascript and css dependencies.  In grails-app/config/BuildConfig.groovy add:
 
@@ -27,7 +29,8 @@ https://github.com/groovydev/modules-manager-grails-plugin
 	}
 
 5 - Create resources modules (download javascript and css dependencies):
-     grails refresh-modules
+
+	grails refresh-modules
 
 6 - Notice how the plugin added the file conf/ModulesBootstrapResources.groovy.  This module config file is used by the resources plugin to define the module dependencies and static resources.
 
